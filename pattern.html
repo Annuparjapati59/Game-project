@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pattern Prompt</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var rows = prompt("Please enter number of rows:", "");
+		rows = parseInt(rows);
+
+		if (!isNaN(rows) && rows > 0) {
+			printPattern(rows);
+		} else {
+			alert("Invalid input. Please refresh and enter a number.");
+		}
+
+		function printPattern(rows) {
+			for (var i = 1; i <= rows; i++) {
+				for (var j = 1; j <= i; j++) {
+					document.write("*");
+				}
+				document.write("<br/>");
+			}
+			for (var i = rows - 1; i >= 1; i--) {
+				for (var j = 1; j <= i; j++) {
+					document.write("*");
+				}
+				document.write("<br/>");
+			}
+		}
+	</script>
+</body>
+</html>
